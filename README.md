@@ -27,7 +27,7 @@ Armand Joulin, Edouard Grave, Piotr Bojanowski, Matthijs Douze, Hérve Jégou, T
 arXiv:1612.03651
 https://doi.org/10.48550/arXiv.1612.03651
 
-The trained classifier is also quantized with minimal loss in performance to create a storage efficient
+The trained classifier is also quantized with minimal loss in performance to create a storage and memory efficient model.
 
 The data preprocessing step includes
 
