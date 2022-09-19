@@ -1,0 +1,32 @@
+[
+  {
+    "name": "lr",
+    "short_desc": "learning rate of the algorithm - range is 0.1 - 1.0, but limiting to 0.5 to avoid NaN loss situations",
+    "default": 0.10001,
+    "type": "real",
+    "search_type": "uniform",
+    "range_low": 0.1,
+    "range_high": 0.5,
+    "run_HPO": true
+  },
+  {
+    "name": "dim",
+    "short_desc": "Size of word vectors. Default in original fasttext package is 100",
+    "default": 100,
+    "type": "int",
+    "search_type": "uniform",
+    "range_low": 50,
+    "range_high": 200,
+    "run_HPO": true
+  },
+  {
+    "name": "wordNgrams",
+    "short_desc": "max length of word ngram. Default in original fasttext package is 1",
+    "default": 2,
+    "type": "int",
+    "search_type": "uniform",
+    "range_low": 1,
+    "range_high": 3,
+    "run_HPO": true
+  }
+]
