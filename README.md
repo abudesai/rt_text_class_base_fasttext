@@ -16,14 +16,12 @@ FastText Classifier for Text Classification - Base problem category as per Ready
 fastText is a library for efficient learning of word representations and sentence classification.
 
 See these for source:
-
+-----------------------------
 Bag of Tricks for Efficient Text Classification
 Armand Joulin, Edouard Grave, Piotr Bojanowski, Tomas Mikolov
 arXiv:1607.01759
-
 https://doi.org/10.48550/arXiv.1607.01759
-Focus to learn more
-Submission history
+
 
 FastText.zip: Compressing text classification models
 Armand Joulin, Edouard Grave, Piotr Bojanowski, Matthijs Douze, Hérve Jégou, Tomas Mikolov
