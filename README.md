@@ -32,7 +32,7 @@ The trained classifier is also quantized with minimal loss in performance to cre
 The data preprocessing step includes
 
 - lower casing all tokens
-- remove tall words less than 2 characters
+- remove all words less than 2 characters
 - remove stop words (list of stop words is in this repo)
 - Porter stemming
 
