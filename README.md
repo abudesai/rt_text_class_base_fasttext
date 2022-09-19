@@ -15,13 +15,12 @@ FastText Classifier for Text Classification - Base problem category as per Ready
 
 fastText is a library for efficient learning of word representations and sentence classification.
 
-See these for source:
------------------------------
+## See these for source:
+
 Bag of Tricks for Efficient Text Classification
 Armand Joulin, Edouard Grave, Piotr Bojanowski, Tomas Mikolov
 arXiv:1607.01759
 https://doi.org/10.48550/arXiv.1607.01759
-
 
 FastText.zip: Compressing text classification models
 Armand Joulin, Edouard Grave, Piotr Bojanowski, Matthijs Douze, Hérve Jégou, Tomas Mikolov
@@ -47,4 +46,4 @@ Hyperparameter Tuning (HPT) is setup to fine-tune this parameters:
 
 During the model development process, the algorithm was trained and evaluated on a variety of datasets such as clickbait, drug, and movie reviews as well as spam texts and tweets from Twitter.
 
-This Text Classifier is written using Python as its programming language. SciKitLearn is used to implement the main algorithm, evaluate the model, and preprocess the data. Numpy, pandas, and feature_engine are used for the data preprocessing steps. SciKit-Optimize was used to handle the HPT. Flask + Nginx + gunicorn are used to provide web service which includes two endpoints- /ping for health check and /infer for predictions in real time.
+This Text Classifier is written using Python as its programming language. fasttext pypi package is used to implement the main algorithm and evaluate the model. Sklearn, numpy, pandas, and feature_engine are used for the data preprocessing steps. SciKit-Optimize was used to handle the HPT. Flask + Nginx + gunicorn are used to provide web service which includes two endpoints- /ping for health check and /infer for predictions in real time.
