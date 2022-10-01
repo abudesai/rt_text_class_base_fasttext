@@ -52,6 +52,7 @@ class Classifier():
         # quantize the model 
         print("Quantizing model. This may take a few minutes..")
         self.model.quantize(input = train_input_path, qnorm=True, retrain=True, cutoff=200000)   
+        print("Quantizing finished.")
         
     
     def predict_proba(self, X): 
@@ -97,9 +98,11 @@ class Classifier():
 
     
     def save(self, model_path): 
+        print("Saving model...")
         self.model.save_model(os.path.join(model_path, fasttext_model_fname))
         self.model = None
         joblib.dump(self, os.path.join(model_path, model_fname))
+        print("Done saving...")
         
 
 
