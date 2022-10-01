@@ -50,9 +50,9 @@ class Classifier():
             epoch=100)     
         
         # quantize the model 
-        print("Quantizing model. This may take a few minutes..")
-        self.model.quantize(input = train_input_path, qnorm=True, retrain=True, cutoff=200000)   
-        print("Quantizing finished.")
+        # print("Quantizing model. This may take a few minutes..")
+        # self.model.quantize(input = train_input_path, qnorm=True, retrain=True, cutoff=200000)   
+        # print("Quantizing finished.")
         
     
     def predict_proba(self, X): 
