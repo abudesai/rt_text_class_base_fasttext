@@ -149,6 +149,7 @@ def get_test_key():
 
 
 def score(test_key, predictions, data_schema): 
+    print(test_key.shape, predictions.shape)
     # we need to get a couple of field names in the test_data file to do the scoring 
     # we get it using the schema file
     id_field = data_schema["inputDatasets"]["textClassificationBaseMainInput"]["idField"]
@@ -259,8 +260,9 @@ if __name__ == "__main__":
     run_hpt_list = [False, True]
     run_hpt_list = [False]
     
-    datasets = ["clickbait", "drug_reviews", "movie_reviews", "spam_text", "tweet_emotions"]
-    datasets = ["clickbait"]
+    datasets = ["clickbait", "drug_reviews", "ecommerce_categories", "fake_job_postings", "hate_speech", 
+                "movie_reviews", "musical_instruments", "newsgroups", "spam_text", "tweet_emotions"]
+    datasets = ["hate_speech"]
     
     for run_hpt in run_hpt_list:
         all_results = []

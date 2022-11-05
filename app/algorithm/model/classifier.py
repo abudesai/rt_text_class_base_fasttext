@@ -23,7 +23,7 @@ valid_input_path = os.path.join(temp_file_dir, "_valid_.txt")
 
 class Classifier(): 
     
-    def __init__(self, lr=0.1, dim = 100, wordNgrams=2, **kwargs) -> None:
+    def __init__(self, lr=0.1, dim = 30, wordNgrams=2, **kwargs) -> None:
         self.lr = lr
         self.dim = dim
         self.wordNgrams = wordNgrams
