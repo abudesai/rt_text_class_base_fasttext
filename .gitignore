@@ -15,7 +15,6 @@ hpt_results/
 
 **/temp_input_files/*
 
-docker-compose.yaml
 build_and_push.sh
 venv/
 
