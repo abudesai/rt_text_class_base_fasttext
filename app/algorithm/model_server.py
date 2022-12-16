@@ -22,28 +22,15 @@ class ModelServer:
 
     def _get_preprocessor(self):
         if self.preprocessor is None:
-            try:
-                self.preprocessor = pipeline.load_preprocessor(self.model_path)
-                return self.preprocessor
-            except:
-                print(
-                    f"Could not load preprocessor from {self.model_path}. Did you train the model first?"
-                )
-                return None
+            self.preprocessor = pipeline.load_preprocessor(self.model_path)
+            return self.preprocessor
         else:
             return self.preprocessor
 
     def _get_model(self):
         if self.model is None:
             self.model = classifier.load_model(self.model_path)
-            try:
-                self.model = classifier.load_model(self.model_path)
-                return self.model
-            except:
-                print(
-                    f"Could not load model from {self.model_path}. Did you train the model first?"
-                )
-                return None
+            return self.model
         else:
             return self.model
 

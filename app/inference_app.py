@@ -2,7 +2,7 @@
 # https://github.com/aws/amazon-sagemaker-examples/blob/main/advanced_functionality/scikit_bring_your_own/container/decision_trees/predictor.py
 
 import io
-import pandas as pd
+import pandas as pd, numpy as np
 import json
 from flask import jsonify
 import flask
@@ -56,7 +56,6 @@ def infer():
     if flask.request.content_type == "application/json":
         req_data_dict = json.loads(flask.request.data.decode("utf-8"))
         data = pd.DataFrame.from_records(req_data_dict["instances"])
-        print(data)
     else:
         return flask.Response(
             response="This endpoint only supports application/json data",
@@ -84,7 +83,9 @@ def infer():
             pred_obj[id_field_name] = rec[id_field_name]
             pred_obj["label"] = rec["__label"]
             pred_obj["scores"] = {
-                k: v for k, v in rec.items() if k not in [id_field_name, "__label"]
+                str(k): np.round(v, 5)
+                for k, v in rec.items()
+                if k not in [id_field_name, "__label"]
             }
             predictions_response.append(pred_obj)
 
